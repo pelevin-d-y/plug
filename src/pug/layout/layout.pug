@@ -1,11 +1,11 @@
-- var title = 'title'
+- var title = 'Plug'
 
 //- layout.pug
 html(lang="en")
   head
     meta(charset="utf-8")
 
-    title My Site - #{title}
+    title #{title}
     meta(name="description" content="The HTML5 Herald")
     block scripts
       script(src='../../js/index.js')
@@ -13,6 +13,3 @@ html(lang="en")
       link(rel="stylesheet" href="../../styles/styles.scss")
   body
     block content
-    block foot
-      #footer
-        p some footer content

@@ -2,17 +2,29 @@ extends ../layout/layout.pug
 
 block content
   main.main
-    .font-regular
-      | ELLANSÉ® предназначен для субдермальных инъекций. Благодаря своей когезивности, ELLANSÉ® может легко приобретать необходимую форму, обеспечивая большую точность при коррекции формы и контуров
-    .font-bold
-      | ELLANSÉ® предназначен для субдермальных инъекций. Благодаря своей когезивности, ELLANSÉ® может легко приобретать необходимую форму, обеспечивая большую точность при коррекции формы и контуров
-    .font-medium
-      | ELLANSÉ® предназначен для субдермальных инъекций. Благодаря своей когезивности, ELLANSÉ® может легко приобретать необходимую форму, обеспечивая большую точность при коррекции формы и контуров
-    .font-regular-moon
-      | ELLANSÉ® предназначен для субдермальных инъекций. Благодаря своей когезивности, ELLANSÉ® может легко приобретать необходимую форму, обеспечивая большую точность при коррекции формы и контуров
-    .image
-      img(src="../../images/header-1.jpg")
-    .svg 
-      include ../../images/svg/sinclair.svg
-    a(href="./second-page.pug")
-      | second-page
+    .content.plug-content
+      h1.plug-logo
+        | wrisycle
+      .plug-content__conteiner
+        .plug-content__text
+          p.plug-content__big-text
+            | We're still developing but you can still register your interest and be the first to know when we’re ready to go!
+          p.plug-content__small-text
+            | Drop your email and we will keep you up to date with release dates and any other information!
+        form(action="#").form
+          input(type="email" require placeholder="Enter your e-mail")
+          button.form-button
+            | SEND
+      .plug-footer
+        .plug-footer__container
+          .plug-footer__line
+          .plug-footer__text
+            | Follow us on social networks
+          .plug-footer__socials
+            .plug-footer__social.plug-footer__inst
+              include ../../images/svg/instagram.svg
+            .plug-footer__twitter
+              include ../../images/svg/twitter.svg
+    //- .svg 
+    //-   include ../../images/svg/sinclair.svg
+    
