@@ -11,8 +11,8 @@ block content
             | We're still developing but you can still register your interest and be the first to know when we’re ready to go!
           p.plug-content__small-text
             | Drop your email and we will keep you up to date with release dates and any other information!
-        form(name="contact" method="POST" data-netlify="true").form
-          input(type="email" require placeholder="Enter your e-mail")
+        form(name="contact" method="POST" data-netlify="true")#formElem.form
+          input(type="email" name="email" placeholder="Enter your e-mail" required)
           button(type="submit").form-button
             | SEND
       .plug-footer
