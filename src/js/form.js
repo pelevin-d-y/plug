@@ -4,19 +4,18 @@ import Swal from "sweetalert2";
 document.addEventListener("DOMContentLoaded", () => {
   let sending = false;
 
-  
-
   formElem.onsubmit = (e) => {
     e.preventDefault();
     if (!sending) {
       sending = true;
       const formData = new FormData(formElem);
       const formDataValues = Object.fromEntries(formData);
-      const isBusinessCheckbox = document.querySelector('.form__toggle-checkbox')
-      formDataValues.is_business = isBusinessCheckbox.checked
-      
-      
-      fetch("", {
+      const isBusinessCheckbox = document.querySelector(
+        ".form__toggle-checkbox"
+      );
+      formDataValues.is_business = isBusinessCheckbox.checked;
+
+      fetch("https://c52.42.works/users", {
         method: "POST",
         body: JSON.stringify(formDataValues),
         headers: {
