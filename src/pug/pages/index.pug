@@ -4,25 +4,34 @@ block content
   main.main
     .content.plug-content
       .plug-logo
-        include ../../images/svg/logo.svg
-      .plug-content__conteiner
+      .plug-content__container
         .plug-content__text
-          p.plug-content__big-text
-            | We're still developing but you can still register your interest and be the first to know when we’re ready to go!
-          p.plug-content__small-text
-            | Drop your email and we will keep you up to date with release dates and any other information!
+          p.plug-content__text
+            | We’re still developing but you can still register your username 
+            = ' '
+            span.blue-text and be the first to know when we're ready!
         form(name="contact" method="POST" data-netlify="true")#formElem.form
-          input(type="email" name="email" placeholder="Enter your e-mail" required)
+          input(type="text" name="username" placeholder="@Username" required maxlength=50)
+          input(type="email" name="email" placeholder="Your e-mail" required maxlength=50)
+          input(type="checkbox" name="is_business").form__toggle-checkbox.hidden
+          .toggle
+            .toggle__variant.toggle__business(data-value="business")
+              | Business Enity
+            .toggle__variant.toggle__individual.active(data-value="individual")
+              | Individual
+          input(type="text" name="business_name" placeholder="Business name" maxlength=100).form__business-name.hidden
+          input(type="text" name="instagram_name" placeholder="@Instagram" maxlength=200)
+          input(type="text" name="twitter_name" placeholder="@Twitter" maxlength=200)
           button(type="submit").form-button
-            | SEND
+            | Register
       .plug-footer
         .plug-footer__container
           .plug-footer__line
           .plug-footer__text
             | Follow us on social networks
           .plug-footer__socials
-            .plug-footer__social.plug-footer__inst
+            a(href="https://www.instagram.com/wrisycle/" target="_blank").plug-footer__inst
               include ../../images/svg/instagram.svg
-            .plug-footer__twitter
+            a(href="#").plug-footer__social.plug-footer__twitter
               include ../../images/svg/twitter.svg
     
