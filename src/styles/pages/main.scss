@@ -59,6 +59,21 @@
     align-items: center;
   }
 
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+
+    input {
+      padding-left: 43px;
+    }
+  }
+
+  .input-icon {
+    position: absolute;
+    left: 23px;
+    top: 18px;
+  }
+
   input {
     display: block;
     max-width: 430px;
