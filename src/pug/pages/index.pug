@@ -1,12 +1,16 @@
 extends ../layout/layout.pug
 
 block content
+
+  - var page = 'index'
+
   main.main
-    .content.plug-content
-      .plug-logo
-      .plug-content__container
-        .plug-content__text
-          p.plug-content__text
+    .content.market-content
+      include ../components/navigation.pug
+      .market-logo
+      .market-content__container
+        .market-content__text
+          p.market-content__text
             | We’re still developing but you can still register your username and be the first to know when we're ready!
         form(name="contact" method="POST" data-netlify="true")#formElem.form
           .input-wrapper
@@ -24,14 +28,4 @@ block content
           input(type="text" name="twitter_name" placeholder="@Twitter" maxlength=200)
           button(type="submit").form-button
             | Register
-      .plug-footer
-        .plug-footer__container
-          .plug-footer__line
-          .plug-footer__text
-            | Follow us on social networks
-          .plug-footer__socials
-            a(href="https://www.instagram.com/wrisycle/" target="_blank").plug-footer__inst
-              include ../../images/svg/instagram.svg
-            a(href="#").plug-footer__social.plug-footer__twitter
-              include ../../images/svg/twitter.svg
-    
+      include ../components/footer.pug

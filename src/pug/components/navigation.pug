@@ -1,0 +1,11 @@
+
+
+nav.nav 
+  a.nav__link(class=(page === "index" ? "active" : undefined) href="../pages/index.pug")
+    | Marketplace (Coming Soon) 
+  a.nav__link(class=(page === "liquidity" ? "active" : undefined) href="../pages/liquidity.pug")
+    | Liquidity
+  a.nav__link(class=(page === "faq" ? "active" : undefined) href="../pages/faq.pug")
+    | FAQ
+  a.nav__link.disabled(class=(page === "connect" ? "active" : undefined) href="#")
+    | Connect to a wallet (Metamask Extension)
