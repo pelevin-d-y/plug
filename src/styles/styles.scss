@@ -4,4 +4,9 @@
 @import 'preferences/_mixins.scss';
 @import 'preferences/_base.scss';
 
+@import 'components/footer.scss';
+@import 'components/navigation.scss';
+
 @import 'pages/main.scss';
+@import 'pages/liquidity.scss';
+@import 'pages/faq.scss';

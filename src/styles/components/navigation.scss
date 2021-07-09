@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  padding: 32px 16px;
+}
+
+.nav__link {
+  padding: 5px;
+
+  text-decoration: none;
+  color: $blue;
+}
+
+.nav__link.active {
+  color: $black;
+}
