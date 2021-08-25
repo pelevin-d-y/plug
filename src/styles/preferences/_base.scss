@@ -11,6 +11,7 @@
   normal
 );
 @include font-face('Avenir', '../fonts/Avenir', $regular, normal);
+@include font-face('Avenir', '../fonts/Avenir-Bold', $bold, normal);
 
 * {
   box-sizing: border-box;
